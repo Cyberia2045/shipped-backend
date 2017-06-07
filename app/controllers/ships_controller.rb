@@ -8,6 +8,7 @@ class ShipsController < ApplicationController
   end
 
   def create
+    Ship.create(ships_params)
   end
 
   def destroy
@@ -15,4 +16,11 @@ class ShipsController < ApplicationController
 
   def update
   end
+
+  private
+
+  def ships_params
+    params.require(:data).permit(:name, :capacity, :location)
+  end
+
 end
