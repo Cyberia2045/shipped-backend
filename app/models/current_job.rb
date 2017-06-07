@@ -1,0 +1,2 @@
+class CurrentJob < ApplicationRecord
+end
