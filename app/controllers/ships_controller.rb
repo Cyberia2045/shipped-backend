@@ -15,6 +15,7 @@ class ShipsController < ApplicationController
   end
 
   def update
+    
   end
 
   private
