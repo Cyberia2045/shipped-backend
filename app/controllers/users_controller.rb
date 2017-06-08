@@ -3,6 +3,13 @@ class UsersController < ApplicationController
   end
 
   def show
+    user = User.find(params[:id])
+
+    if user.password === params[:password]
+      session[user_id] = user.id
+      
+      render json: user
+    end
   end
 
   def create
